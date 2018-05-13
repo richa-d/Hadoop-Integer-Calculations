@@ -1,7 +1,0 @@
-val in=sc.textFile("/user/rsd352/intinput1.txt")
-val in1=in.flatMap(line => line.split(" "))
-val in2=in1.map({case (i) => (1,i)})
-val in3=in2.map({case (i,j) => (i,j.toInt)})
-val in4=in3.sortBy(_._2,false)
-val in5=in4.take(1).map({case (i,j) => j})
-sc.parallelize(in5).saveAsTextFile("/user/rsd352/Ans1A-2Bi")
